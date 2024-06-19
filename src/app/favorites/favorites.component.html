@@ -1,0 +1,17 @@
+<div *ngIf="favoriteJobs.length > 0; else noFavoritesMessage">
+  <ul class="job-list">
+    <li *ngFor="let job of favoriteJobs" class="job-item">
+      <div class="job-details">
+        <img class="job-company-logo" [src]="job.companyLogo" alt="{{ job.companyName }}" width="50" height="50">
+        <div>
+          <h2 class="job-title">{{ job.title }}</h2>
+          <span class="job-company-name">Company: {{ job.companyName }}</span>
+          <span class="job-reference">Reference: {{ job.reference }}</span>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+<ng-template #noFavoritesMessage>
+  <p>There are no favorite jobs to display!</p>
+</ng-template>

@@ -1,0 +1,28 @@
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+}
+
+a {
+  padding-inline: 100px;
+}
+
+a.active {
+  background-color: lightgrey;
+  color: black;
+  font-weight: bolder;
+}
+
+nav a:hover,
+nav a:focus,
+nav a:visited:focus {
+  text-decoration: none;
+  background-color: lightgrey;
+}

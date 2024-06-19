@@ -1,0 +1,21 @@
+<div *ngIf="job" class="job-details-container">
+  <button (click)="goBack()" class="back-button">Back to Job List</button>
+  <div class="job-details">
+    <h1 class="job-title">{{ job.title }}</h1>
+    <div class="job-info">
+      <img [src]="job.companyLogo" alt="{{ job.companyName }}" class="company-logo">
+      <div class="job-meta">
+        <p class="job-company-name"><strong>Company:</strong> {{ job.companyName }}</p>
+        <p class="job-types"><strong>Types:</strong> {{ job.types?.join(', ') }}</p>
+        <p class="job-industries"><strong>Industries:</strong> {{ job.industries?.join(', ') }}</p>
+        <p class="job-publish-date"><strong>Publish date:</strong> {{ job.publishDate }}</p>
+        <p class="job-location"><strong>Location:</strong> {{ job.location }}</p>
+        <p class="job-reference"><strong>Reference:</strong> {{ job.reference }}</p>
+      </div>
+    </div>
+    <div class="job-description">
+      <h2><strong>Description:</strong></h2>
+      <div [innerHTML]="job.description"></div>
+    </div>
+  </div>
+</div>
