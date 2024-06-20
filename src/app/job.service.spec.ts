@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import { JobService } from './job.service';
+import { Job, JobService } from './job.service';
 
 describe('JobService', () => {
   let service: JobService;
@@ -49,7 +49,7 @@ describe('JobService', () => {
       description: 'Job description.'
     };
 
-    service.getJobById(jobId).subscribe((jobDetails: any) => {
+    service.getJobById(jobId).subscribe((jobDetails: Job) => {
       expect(jobDetails).toEqual(mockJobDetails);
     });
 
